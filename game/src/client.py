@@ -8,6 +8,7 @@ from thrift.protocol import TBinaryProtocol
 from sys import stdin
 
 def operate(op, user_id, username, score):
+
     # Make socket
     transport = TSocket.TSocket('localhost', 9090)
 
@@ -23,13 +24,11 @@ def operate(op, user_id, username, score):
 # Connect!
     transport.open()
 
-
     user = User(user_id, username, score)
     if op == "add":
         client.add_user(user, "")
     elif op == "remove":
         client.rempve_user(user, "")
-
 
     # Close!
     transport.close()
