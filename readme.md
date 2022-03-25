@@ -4,7 +4,6 @@
 
 <br>thrift/多线程/消息队列/微服务/生产者-消费者模型/cpp/python
 
-
 ### 图示
 
 ![image](https://user-images.githubusercontent.com/49400104/160067216-43f7e998-4aed-45d8-9b88-89cb23338406.png)
@@ -26,7 +25,6 @@
   
  ### 版本更新
  对匹配机制逐步完善
- 
  <br> match-server: 无实际操作，只打印
  <br> match-server2.0: 每次match匹配池中的前两个人
  <br> match-server3.0: 考虑匹配的合理性，将分值差50以内的玩家匹配在一起，每1秒检测一次
