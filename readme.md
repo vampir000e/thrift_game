@@ -1,8 +1,8 @@
 ## Linux learning——thrift
 
-使用thrift实现游戏匹配机制，该应用的不同微服务分配到不同服务器上，且各端使用不同语言实现
+ &nbsp使用thrift实现游戏匹配机制，该应用的不同微服务分配到不同服务器上，且各端使用不同语言实现
 
-thrift/多线程/消息队列/微服务/生产者-消费者模型/cpp/python
+ &nbspthrift/多线程/消息队列/微服务/生产者-消费者模型/cpp/python
 
 
 ### 图示
@@ -15,21 +15,21 @@ thrift/多线程/消息队列/微服务/生产者-消费者模型/cpp/python
 ![image](https://user-images.githubusercontent.com/49400104/160064729-3a5398ea-7107-4d15-9e84-ef867f40f0ca.png)
 
 1. thrift
-  match.thrift 定义匹配接口
-  save.thrift 定义数据存储接口
+   &nbspmatch.thrift 定义匹配接口
+   &nbspsave.thrift 定义数据存储接口
 2. game
-  游戏端，也是匹配客户端match_client
-  client.py业务逻辑
+   &nbsp游戏端，也是匹配客户端match_client
+   &nbspclient.py业务逻辑
 3. match_system
-  匹配系统，是匹配服务端match_server，同时也是数据存储客户端save_client
-  main.cpp业务逻辑
+   &nbsp匹配系统，是匹配服务端match_server，同时也是数据存储客户端save_client
+   &nbspmain.cpp业务逻辑
   
  ### 版本更新
  对匹配机制逐步完善
  
- match-server: 无实际操作，只打印
- match-server2.0: 每次match匹配池中的前两个人
- match-server3.0: 考虑匹配的合理性，将分值差50以内的玩家匹配在一起，每1秒检测一次
- match-server4.0: 改为多线程，每次匹配新开一线程
- match-server5.0: 随着玩家等待时间的增加，可匹配玩家的范围应该拓宽。如果匹配池中有2个以上玩家但分数差>50，而已经等待已久，这种情况应当匹配。
+  &nbsp match-server: 无实际操作，只打印
+  &nbsp match-server2.0: 每次match匹配池中的前两个人
+  &nbsp match-server3.0: 考虑匹配的合理性，将分值差50以内的玩家匹配在一起，每1秒检测一次
+  &nbsp match-server4.0: 改为多线程，每次匹配新开一线程
+  &nbsp match-server5.0: 随着玩家等待时间的增加，可匹配玩家的范围应该拓宽。如果匹配池中有2个以上玩家但分数差>50，而已经等待已久，这种情况应当匹配。
  
