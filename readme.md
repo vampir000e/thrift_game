@@ -14,7 +14,7 @@
 ![image](https://user-images.githubusercontent.com/49400104/160064729-3a5398ea-7107-4d15-9e84-ef867f40f0ca.png)
 
 1. thrift
-   <br>pmatch.thrift 定义匹配接口
+   <br>match.thrift 定义匹配接口
    <br>save.thrift 定义数据存储接口
 2. game
   <br>游戏端，也是匹配客户端match_client
